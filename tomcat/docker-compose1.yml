@@ -1,0 +1,11 @@
+version: '2' 
+services:
+  service-tomcat:
+    image: tomcat
+    container_name: tc
+    volumes:
+      - ~/docker/tomcat/conf:/usr/local/tomcat/conf
+      - ~/docker/tomcat/webapps:/usr/local/tomcat/webapps
+    ports:
+      - 8080:8080
+      - 8443:8443

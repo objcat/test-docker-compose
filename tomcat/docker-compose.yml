@@ -1,12 +1,12 @@
-version: '2'
+version: '2' 
 services:
   service-tomcat:
     image: tomcat
-    container_name: tc
+    container_name: tomcat
     volumes:
       - ./conf:/usr/local/tomcat/conf
       - ./webapps:/usr/local/tomcat/webapps
+      - ./logs:/usr/local/tomcat/logs
     ports:
       - 8080:8080
       - 8443:8443
-

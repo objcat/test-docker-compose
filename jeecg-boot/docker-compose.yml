@@ -1,0 +1,18 @@
+version: '2'
+services:
+  mysql:
+    image: mysql
+    container_name: mysql
+    environment:
+      - MYSQL_ROOT_PASSWORD=123456
+      - TZ=Asia/Shanghai
+    ports:
+      - 3306:3306
+    volumes:
+      - ./mysql:/var/lib/mysql
+      - ./conf/mysql:/etc/mysql
+  redis:
+    image: redis
+    container_name: redis
+    ports:
+      - 6379:6379

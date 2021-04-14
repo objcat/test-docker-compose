@@ -1,0 +1,15 @@
+version: '2'
+services:
+  java:
+    image: java
+    restart: always
+    container_name: survey
+    volumes:
+      - ./survey.jar:/usr/local/survey.jar
+    ports:
+      - 8083:8083
+    command:
+      - /bin/sh
+      - -c
+      - |
+        java -jar /usr/local/survey.jar

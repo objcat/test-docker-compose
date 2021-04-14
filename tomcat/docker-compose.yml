@@ -3,6 +3,7 @@ services:
   service-tomcat:
     image: tomcat
     container_name: tomcat
+    restart: always
     volumes:
       - ./conf:/usr/local/tomcat/conf
       - ./webapps:/usr/local/tomcat/webapps
